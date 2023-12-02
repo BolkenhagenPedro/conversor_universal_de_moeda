@@ -2,7 +2,11 @@ from forex_python.converter import CurrencyRates
 
 def limpar_terminal():
     from os import system
-    from 
+    from platform import system as sys
+
+    op = sys()
+    if op == 'Windows': system('cls')
+    else: system('clear')
 
 def converter(valor, moeda_origem, moeda_destino):
     while True:
@@ -82,3 +86,4 @@ while True:
     print(f'Moeda convertida de {valor} {moeda_origem} para {moeda_convertida:.2f} {moeda_destino}')
     
     if ler_opc() == 2: break
+    limpar_terminal()
