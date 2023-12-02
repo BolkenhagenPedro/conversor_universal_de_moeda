@@ -65,7 +65,7 @@ while True:
     elif opc ==3:
         moeda_origem = 'EUR'
     else:
-        moeda_origem = input('Informe uma moeda origem: ').strip()[:2]
+        moeda_origem = input('Informe uma moeda origem: ').strip()
     print('=' * 30)
     print("""Moeda destino:
 [1] - BRL
@@ -80,7 +80,7 @@ while True:
     elif opc == 3:
         moeda_destino = 'EUR'
     else:
-        moeda_destino = input('Informe uma moeda destino: ').strip()[:2]
+        moeda_destino = input('Informe uma moeda destino: ').strip()
 
     moeda_convertida = converter(valor, moeda_origem, moeda_destino)
     print(f'Moeda convertida de {valor} {moeda_origem} para {moeda_convertida:.2f} {moeda_destino}')
